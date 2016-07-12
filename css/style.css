@@ -247,6 +247,7 @@ main .block2 .item:nth-of-type(3n+3) .label {
 }
 main .block2 .item a {
   display: inline-block;
+  border: 2px solid transparent;
 }
 main .block2 .item a:hover {
   border: 2px solid #649f9b;
@@ -435,6 +436,11 @@ footer .search {
   padding-bottom: 3px;
   margin-bottom: 0px;
   margin-right: 65px;
+  background-color: transparent;
+  outline: none;
+  border-top: none;
+  border-left: none;
+  border-right: none;
 }
 footer .copyright {
   padding-top: 20px;
