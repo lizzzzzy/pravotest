@@ -10,6 +10,35 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="icon" type="image/png" href="favicon.png"/>
         <link href='https://fonts.googleapis.com/css?family=PT+Sans&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script>
+
+$(document).ready(function() {
+    var left= $('.carousel-arrow-left');
+    var right= $('.carousel-arrow-right');
+    var elementsList = $('.slider');
+ 
+    var pixelsOffset = 295;
+    var currentLeftValue = 0;
+    var elementsCount = elementsList.find('li').length;
+    var minimumOffset = - ((elementsCount - 3) * pixelsOffset);
+    var maximumOffset = 0;
+ 
+    left.click(function() {        
+        if (currentLeftValue != maximumOffset) {
+            currentLeftValue += 295;
+            elementsList.animate({ left : currentLeftValue + "px"}, 500);
+        }        
+    });
+ 
+    right.click(function() {        
+        if (currentLeftValue != minimumOffset) {
+            currentLeftValue -= 295;
+            elementsList.animate({ left : currentLeftValue + "px"}, 500);
+        }        
+    });
+});
+    </script>
 </head>
 <body>
 	<div class="wrapper">
@@ -109,26 +138,48 @@
     </div>
     <div class="block4">
         <h2>Наши специалисты</h2>
-        <div class="slider clearfix">
-            <div class="slide col-3 fl-l">
+        <div class="carousel-arrow-left"></div>
+        <div class="carousel-hider">
+        <ul class="slider clearfix">
+            <li class="slide col-3 fl-l">
                 <img src="img/call-1.png" alt="">
                 <div class="name">Гузель</div>
                 <div class="icq">554 554 555</div>
                 <div class="skype">vasya182</div>
-            </div>
-            <div class="slide col-3 fl-l">
+            </li>
+            <li class="slide col-3 fl-l">
                 <img src="img/call-2.png" alt="">
                 <div class="name">Инна</div>
                 <div class="icq">432 234 423</div>
                 <div class="skype">vasya182</div>
-            </div>
-            <div class="slide col-3 fl-l">
+            </li>
+            <li class="slide col-3 fl-l">
                 <img src="img/call-3.png" alt="">
                 <div class="name">Дарья</div>
                 <div class="icq">432 234 423</div>
                 <div class="skype">vasya182</div>
-            </div>
+            </li>
+            <li class="slide col-3 fl-l">
+                <img src="img/call-1.png" alt="">
+                <div class="name">Гузель</div>
+                <div class="icq">554 554 555</div>
+                <div class="skype">vasya182</div>
+            </li>
+            <li class="slide col-3 fl-l">
+                <img src="img/call-2.png" alt="">
+                <div class="name">Инна</div>
+                <div class="icq">432 234 423</div>
+                <div class="skype">vasya182</div>
+            </li>
+            <li class="slide col-3 fl-l">
+                <img src="img/call-3.png" alt="">
+                <div class="name">Дарья</div>
+                <div class="icq">432 234 423</div>
+                <div class="skype">vasya182</div>
+            </li>
+        </ul>
         </div>
+         <div class="carousel-arrow-right"></div>
         <a href="#" class="btn">Позвоните мне</a>
     </div>
     <div class="block5">
@@ -147,11 +198,7 @@
             <a href="#" class="partners--item fl-l col-7"><img src="" alt=""></a>
             <a href="#" class="partners--item fl-l col-7"><img src="" alt=""></a>
             <a href="#" class="partners--item fl-l col-7"><img src="" alt=""></a> -->
-            <p>
-
-
-
-Доверьтесь и вы!</p>
+            <p>Доверьтесь и вы!</p>
         </div>
     </div>
     <div class="block6">

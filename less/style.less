@@ -1,3 +1,6 @@
+header .bottom-menu nav ul {
+    list-style: none;
+}
 @import "font-face.less";
 @import "variables.less";
 @import "mixin.less";
@@ -26,6 +29,9 @@ body {
 .fl-r {
     float: right;
 }
+.col-3 {
+}
+
 .col-3 {
     width: 33.33%;
 }
@@ -76,7 +82,7 @@ body {
 }
 header {
     background-color: #ededed;
-    padding: 55px 38px 5px 38px;
+    padding: 55px 38px 0px 38px;
     .top {
         .logo {
             width: 40%;
@@ -143,13 +149,13 @@ font-weight: 700;
     }
     .bottom-menu {
         width: 100%;
-        padding-top: 45px;
+        padding-top: 39px;
         nav {
             ul {
-                list-style: none;
                 li {
                     float: left;
                     padding-right: 72px;
+                    list-style: none;
 
                     &:last-of-type{
                     padding-right: 0px;
@@ -159,9 +165,11 @@ font-weight: 700;
                         color: #000;
                         font-size: 22px;
                         font-weight: 600;
-                        padding-bottom: 4px;
+                        padding-bottom: 7px;
+                        margin-bottom: -7px;
                         &.active {
                             border-bottom: 7px solid #0b8881;
+                            box-sizing: border-box;
                         }
                     }
                 }
@@ -205,8 +213,13 @@ main {
 
             }
 
-            a:hover{border: 2px solid #649f9b;}
-            
+            a{
+            display: inline-block;
+            &:hover{
+          border: 2px solid #649f9b;
+
+            }
+            }            
             img {
             padding: 0px;
             height: 250px;
@@ -286,20 +299,51 @@ padding-bottom: 200px;
 
  padding-top: 34px;
 
+ padding-left: 72px;
+
+.carousel-hider {
+    width: 920px;
+    overflow: hidden;
+    float: left;
+}
+
+.carousel-arrow-left, .carousel-arrow-right {
+    float: left;
+    width:64px;
+    height: 107px;
+    background-image: url(../img/left-arrow.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    top: 40px;
+
+    &:hover{
+    background-image: url(../img/right-arrow.png);
+    }
+}
+
+.carousel-arrow-right{
+    transform: rotate(180deg);;
+}
+
         .slider {
 
-        margin: 0 auto;
-
-        width: 1000px;
+          width: 10000px;
 
         margin-bottom: 50px;
+        position: relative;
+
+        list-style: none;
             .slide {
+            float: left;
                 color: #161616;
                 font-size: 23px;
                 line-height: 27px;
-                width: 33.299999999999997%;
                 text-align: left;
-                img {}
+            display: inline-block;
+            width: 200px;
+            margin: 0px 55px;
+                img { max-width: 180px;}
                 .name {
                     font-size: 25px;
                     line-height: 29px;

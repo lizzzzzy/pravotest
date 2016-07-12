@@ -1,3 +1,6 @@
+header .bottom-menu nav ul {
+  list-style: none;
+}
 @font-face {
   font-family: 'Segoe UI';
   src: url('fonts/hinted-subset-SegoeUI.eot');
@@ -122,7 +125,7 @@ body {
 }
 header {
   background-color: #ededed;
-  padding: 55px 38px 5px 38px;
+  padding: 55px 38px 0px 38px;
 }
 header .top .logo {
   width: 40%;
@@ -185,14 +188,12 @@ header .top .right-side .others {
 }
 header .bottom-menu {
   width: 100%;
-  padding-top: 45px;
-}
-header .bottom-menu nav ul {
-  list-style: none;
+  padding-top: 39px;
 }
 header .bottom-menu nav ul li {
   float: left;
   padding-right: 72px;
+  list-style: none;
 }
 header .bottom-menu nav ul li:last-of-type {
   padding-right: 0px;
@@ -202,10 +203,12 @@ header .bottom-menu nav ul li a {
   color: #000;
   font-size: 22px;
   font-weight: 600;
-  padding-bottom: 4px;
+  padding-bottom: 7px;
+  margin-bottom: -7px;
 }
 header .bottom-menu nav ul li a.active {
   border-bottom: 7px solid #0b8881;
+  box-sizing: border-box;
 }
 main .block1 {
   padding: 50px 110px 0;
@@ -241,6 +244,9 @@ main .block2 .item:nth-of-type(3n+3) {
 }
 main .block2 .item:nth-of-type(3n+3) .label {
   right: 50px;
+}
+main .block2 .item a {
+  display: inline-block;
 }
 main .block2 .item a:hover {
   border: 2px solid #649f9b;
@@ -305,18 +311,49 @@ main .block3 .advantages--bold {
 }
 main .block4 {
   padding-top: 34px;
+  padding-left: 72px;
+}
+main .block4 .carousel-hider {
+  width: 920px;
+  overflow: hidden;
+  float: left;
+}
+main .block4 .carousel-arrow-left,
+main .block4 .carousel-arrow-right {
+  float: left;
+  width: 64px;
+  height: 107px;
+  background-image: url(../img/left-arrow.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  top: 40px;
+}
+main .block4 .carousel-arrow-left:hover,
+main .block4 .carousel-arrow-right:hover {
+  background-image: url(../img/right-arrow.png);
+}
+main .block4 .carousel-arrow-right {
+  transform: rotate(180deg);
 }
 main .block4 .slider {
-  margin: 0 auto;
-  width: 1000px;
+  width: 10000px;
   margin-bottom: 50px;
+  position: relative;
+  list-style: none;
 }
 main .block4 .slider .slide {
+  float: left;
   color: #161616;
   font-size: 23px;
   line-height: 27px;
-  width: 33.299999999999997%;
   text-align: left;
+  display: inline-block;
+  width: 200px;
+  margin: 0px 55px;
+}
+main .block4 .slider .slide img {
+  max-width: 180px;
 }
 main .block4 .slider .slide .name {
   font-size: 25px;
